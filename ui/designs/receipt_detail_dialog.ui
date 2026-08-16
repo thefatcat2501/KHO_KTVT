@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReceiptDetailDialog</class>
+ <widget class="QDialog" name="ReceiptDetailDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>720</width><height>560</height></rect></property>
+  <property name="windowTitle"><string>Chi tiết phiếu</string></property>
+  <property name="modal"><bool>true</bool></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin"><number>22</number></property>
+   <property name="topMargin"><number>20</number></property>
+   <property name="rightMargin"><number>22</number></property>
+   <property name="bottomMargin"><number>18</number></property>
+   <property name="spacing"><number>10</number></property>
+   <item>
+    <widget class="QLabel" name="lblTitle">
+     <property name="text"><string>Chi tiết phiếu</string></property>
+     <property name="objectName" stdset="0"><string notr="true">dialogTitle</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="infoFrame">
+     <layout class="QFormLayout" name="infoForm">
+      <item row="0" column="0"><widget class="QLabel" name="lblCodeCaption"><property name="text"><string>Số phiếu:</string></property></widget></item>
+      <item row="0" column="1"><widget class="QLabel" name="lblCodeValue"><property name="text"><string>-</string></property></widget></item>
+      <item row="1" column="0"><widget class="QLabel" name="lblDateCaption"><property name="text"><string>Ngày tạo:</string></property></widget></item>
+      <item row="1" column="1"><widget class="QLabel" name="lblDateValue"><property name="text"><string>-</string></property></widget></item>
+      <item row="2" column="0"><widget class="QLabel" name="lblPartnerCaption"><property name="text"><string>Đối tác:</string></property></widget></item>
+      <item row="2" column="1"><widget class="QLabel" name="lblPartnerValue"><property name="text"><string>-</string></property></widget></item>
+      <item row="3" column="0"><widget class="QLabel" name="lblNoteCaption"><property name="text"><string>Ghi chú:</string></property></widget></item>
+      <item row="3" column="1"><widget class="QLabel" name="lblNoteValue"><property name="text"><string>-</string></property></widget></item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tblDetail">
+     <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+     <property name="alternatingRowColors"><bool>true</bool></property>
+     <attribute name="horizontalHeaderStretchLastSection"><bool>true</bool></attribute>
+     <column><property name="text"><string>Mã LK</string></property></column>
+     <column><property name="text"><string>Tên linh kiện</string></property></column>
+     <column><property name="text"><string>Đơn vị</string></property></column>
+     <column><property name="text"><string>Số lượng</string></property></column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <spacer name="btnSpacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnClose">
+       <property name="minimumSize"><size><width>110</width><height>38</height></size></property>
+       <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+       <property name="text"><string>Đóng</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

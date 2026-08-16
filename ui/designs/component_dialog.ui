@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ComponentDialog</class>
+ <widget class="QDialog" name="ComponentDialog">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>640</width><height>640</height></rect></property>
+  <property name="windowTitle"><string>Thông tin linh kiện</string></property>
+  <property name="modal"><bool>true</bool></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin"><number>24</number></property>
+   <property name="topMargin"><number>20</number></property>
+   <property name="rightMargin"><number>24</number></property>
+   <property name="bottomMargin"><number>20</number></property>
+   <property name="spacing"><number>10</number></property>
+   <item>
+    <widget class="QLabel" name="lblDialogTitle">
+     <property name="text"><string>Thêm linh kiện mới</string></property>
+     <property name="objectName" stdset="0"><string notr="true">dialogTitle</string></property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="widgetResizable"><bool>true</bool></property>
+     <property name="frameShape"><enum>QFrame::NoFrame</enum></property>
+     <widget class="QWidget" name="scrollAreaContents">
+      <property name="geometry"><rect><x>0</x><y>0</y><width>580</width><height>560</height></rect></property>
+      <layout class="QFormLayout" name="formLayout">
+       <property name="horizontalSpacing"><number>14</number></property>
+       <property name="verticalSpacing"><number>10</number></property>
+       <property name="labelAlignment"><set>Qt::AlignRight|Qt::AlignVCenter</set></property>
+       <item row="0" column="0"><widget class="QLabel" name="lblCode"><property name="text"><string>Mã linh kiện *</string></property></widget></item>
+       <item row="0" column="1">
+        <layout class="QHBoxLayout" name="codeRowLayout">
+         <item><widget class="QLineEdit" name="txtCode"><property name="placeholderText"><string>VD: LK0001 (để trống sẽ tự sinh mã)</string></property></widget></item>
+        </layout>
+       </item>
+       <item row="1" column="0"><widget class="QLabel" name="lblBarcode"><property name="text"><string>Mã vạch</string></property></widget></item>
+       <item row="1" column="1">
+        <widget class="BarcodeLineEdit" name="txtBarcode">
+         <property name="placeholderText"><string>Quét hoặc nhập mã vạch (không bắt buộc)</string></property>
+        </widget>
+       </item>
+       <item row="2" column="0"><widget class="QLabel" name="lblName"><property name="text"><string>Tên linh kiện *</string></property></widget></item>
+       <item row="2" column="1"><widget class="QLineEdit" name="txtName"><property name="placeholderText"><string>VD: Điện trở 10K 1/4W</string></property></widget></item>
+       <item row="3" column="0"><widget class="QLabel" name="lblCategory"><property name="text"><string>Loại linh kiện</string></property></widget></item>
+       <item row="3" column="1">
+        <layout class="QHBoxLayout" name="categoryRowLayout">
+         <item><widget class="QComboBox" name="cboCategory"><property name="editable"><bool>true</bool></property></widget></item>
+        </layout>
+       </item>
+       <item row="4" column="0"><widget class="QLabel" name="lblManufacturer"><property name="text"><string>Nhà sản xuất</string></property></widget></item>
+       <item row="4" column="1"><widget class="QComboBox" name="cboManufacturer"><property name="editable"><bool>true</bool></property></widget></item>
+       <item row="5" column="0"><widget class="QLabel" name="lblUnit"><property name="text"><string>Đơn vị tính</string></property></widget></item>
+       <item row="5" column="1"><widget class="QComboBox" name="cboUnit"><property name="editable"><bool>true</bool></property></widget></item>
+       <item row="6" column="0"><widget class="QLabel" name="lblQuantity"><property name="text"><string>Tồn kho ban đầu</string></property></widget></item>
+       <item row="6" column="1">
+        <widget class="QSpinBox" name="spnQuantity">
+         <property name="minimum"><number>0</number></property>
+         <property name="maximum"><number>1000000</number></property>
+        </widget>
+       </item>
+       <item row="7" column="0"><widget class="QLabel" name="lblMinQuantity"><property name="text"><string>Ngưỡng cảnh báo tối thiểu</string></property></widget></item>
+       <item row="7" column="1">
+        <widget class="QSpinBox" name="spnMinQuantity">
+         <property name="minimum"><number>0</number></property>
+         <property name="maximum"><number>1000000</number></property>
+        </widget>
+       </item>
+       <item row="8" column="0"><widget class="QLabel" name="lblYear"><property name="text"><string>Năm nhập kho</string></property></widget></item>
+       <item row="8" column="1">
+        <widget class="QSpinBox" name="spnYear">
+         <property name="minimum"><number>2000</number></property>
+         <property name="maximum"><number>2100</number></property>
+        </widget>
+       </item>
+       <item row="9" column="0"><widget class="QLabel" name="lblLocation"><property name="text"><string>Vị trí lưu kho</string></property></widget></item>
+       <item row="9" column="1"><widget class="QLineEdit" name="txtLocation"><property name="placeholderText"><string>VD: Kệ A - Ngăn 3</string></property></widget></item>
+       <item row="10" column="0"><widget class="QLabel" name="lblProducts"><property name="text"><string>Sản phẩm sử dụng</string></property></widget></item>
+       <item row="10" column="1">
+        <layout class="QVBoxLayout" name="productsColLayout">
+         <property name="spacing"><number>4</number></property>
+         <item>
+          <widget class="QLineEdit" name="txtProductSearch">
+           <property name="placeholderText"><string>Gõ để lọc nhanh sản phẩm (VD: "bo mạch")...</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QListWidget" name="lstProducts">
+           <property name="minimumSize"><size><width>0</width><height>90</height></size></property>
+           <property name="maximumSize"><size><width>16777215</width><height>110</height></size></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="11" column="0"><widget class="QLabel" name="lblDescription"><property name="text"><string>Mô tả / Ghi chú</string></property></widget></item>
+       <item row="11" column="1">
+        <widget class="QPlainTextEdit" name="pteDescription">
+         <property name="maximumSize"><size><width>16777215</width><height>80</height></size></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblFormError">
+     <property name="text"><string></string></property>
+     <property name="objectName" stdset="0"><string notr="true">errorLabel</string></property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonRowLayout">
+     <item>
+      <spacer name="btnSpacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnCancel">
+       <property name="minimumSize"><size><width>110</width><height>38</height></size></property>
+       <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+       <property name="text"><string>Hủy</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnSave">
+       <property name="minimumSize"><size><width>140</width><height>38</height></size></property>
+       <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+       <property name="text"><string>💾  Lưu lại</string></property>
+       <property name="objectName" stdset="0"><string notr="true">accentButton</string></property>
+       <property name="default"><bool>true</bool></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BarcodeLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>utils.barcode_input</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

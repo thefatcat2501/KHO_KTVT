@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DashboardPage</class>
+ <widget class="QWidget" name="DashboardPage">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1000</width><height>700</height></rect></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin"><number>28</number></property>
+   <property name="topMargin"><number>22</number></property>
+   <property name="rightMargin"><number>28</number></property>
+   <property name="bottomMargin"><number>22</number></property>
+   <property name="spacing"><number>18</number></property>
+   <item>
+    <layout class="QHBoxLayout" name="cardsLayout">
+     <property name="spacing"><number>16</number></property>
+     <item>
+      <widget class="QFrame" name="cardTotalComponents">
+       <property name="minimumSize"><size><width>0</width><height>110</height></size></property>
+       <property name="styleSheet"><string notr="true">QFrame#cardTotalComponents{border-left: 4px solid #2563EB;}</string></property>
+       <layout class="QVBoxLayout" name="c1Layout">
+        <property name="leftMargin"><number>18</number></property>
+        <property name="topMargin"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="lblCard1Title">
+          <property name="text"><string>TỔNG SỐ LINH KIỆN</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardLabel</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblCard1Value">
+          <property name="text"><string>0</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardValue</string></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="cardStockValue">
+       <property name="minimumSize"><size><width>0</width><height>110</height></size></property>
+       <property name="styleSheet"><string notr="true">QFrame#cardStockValue{border-left: 4px solid #16A34A;}</string></property>
+       <layout class="QVBoxLayout" name="c2Layout">
+        <property name="leftMargin"><number>18</number></property>
+        <property name="topMargin"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="lblCard2Title">
+          <property name="text"><string>SỐ LƯỢNG TỒN KHO</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardLabel</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblCard2Value">
+          <property name="text"><string>0</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardValue</string></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="cardLowStock">
+       <property name="minimumSize"><size><width>0</width><height>110</height></size></property>
+       <property name="styleSheet"><string notr="true">QFrame#cardLowStock{border-left: 4px solid #DC2626;}</string></property>
+       <layout class="QVBoxLayout" name="c3Layout">
+        <property name="leftMargin"><number>18</number></property>
+        <property name="topMargin"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="lblCard3Title">
+          <property name="text"><string>SẮP HẾT HÀNG</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardLabel</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblCard3Value">
+          <property name="text"><string>0</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardValue</string></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="cardReceipts">
+       <property name="minimumSize"><size><width>0</width><height>110</height></size></property>
+       <property name="styleSheet"><string notr="true">QFrame#cardReceipts{border-left: 4px solid #D97706;}</string></property>
+       <layout class="QVBoxLayout" name="c4Layout">
+        <property name="leftMargin"><number>18</number></property>
+        <property name="topMargin"><number>14</number></property>
+        <item>
+         <widget class="QLabel" name="lblCard4Title">
+          <property name="text"><string>PHIẾU HÔM NAY</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardLabel</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblCard4Value">
+          <property name="text"><string>0</string></property>
+          <property name="objectName" stdset="0"><string notr="true">cardValue</string></property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bottomLayout">
+     <property name="spacing"><number>16</number></property>
+     <item>
+      <widget class="QFrame" name="lowStockFrame">
+       <layout class="QVBoxLayout" name="lowStockLayout">
+        <property name="leftMargin"><number>18</number></property>
+        <property name="topMargin"><number>14</number></property>
+        <property name="rightMargin"><number>18</number></property>
+        <property name="bottomMargin"><number>14</number></property>
+        <item>
+         <layout class="QHBoxLayout" name="lowStockHeader">
+          <item>
+           <widget class="QLabel" name="lblLowStockTitle">
+            <property name="text"><string>⚠️  Linh kiện sắp hết hàng</string></property>
+            <property name="objectName" stdset="0"><string notr="true">sectionTitle</string></property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="lsSpacer">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnGoToStockIn">
+            <property name="text"><string>+ Nhập kho ngay</string></property>
+            <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+            <property name="objectName" stdset="0"><string notr="true">accentButton</string></property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableWidget" name="tblLowStock">
+          <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+          <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+          <property name="alternatingRowColors"><bool>true</bool></property>
+          <attribute name="horizontalHeaderStretchLastSection"><bool>true</bool></attribute>
+          <column><property name="text"><string>Mã</string></property></column>
+          <column><property name="text"><string>Tên linh kiện</string></property></column>
+          <column><property name="text"><string>Tồn kho</string></property></column>
+          <column><property name="text"><string>Ngưỡng tối thiểu</string></property></column>
+          <column><property name="text"><string>Nhà sản xuất</string></property></column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QFrame" name="quickActionsFrame">
+       <property name="minimumSize"><size><width>280</width><height>0</height></size></property>
+       <property name="maximumSize"><size><width>300</width><height>16777215</height></size></property>
+       <layout class="QVBoxLayout" name="quickActionsLayout">
+        <property name="leftMargin"><number>18</number></property>
+        <property name="topMargin"><number>14</number></property>
+        <property name="rightMargin"><number>18</number></property>
+        <property name="spacing"><number>10</number></property>
+        <item>
+         <widget class="QLabel" name="lblQuickTitle">
+          <property name="text"><string>Thao tác nhanh</string></property>
+          <property name="objectName" stdset="0"><string notr="true">sectionTitle</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnQuickAddComponent">
+          <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+          <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+          <property name="text"><string>➕  Thêm linh kiện mới</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnQuickStockIn">
+          <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+          <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+          <property name="text"><string>📥  Tạo phiếu nhập kho</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnQuickStockOut">
+          <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+          <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+          <property name="text"><string>📤  Tạo phiếu xuất kho</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnQuickBackup">
+          <property name="minimumSize"><size><width>0</width><height>42</height></size></property>
+          <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+          <property name="text"><string>💾  Sao lưu dữ liệu ngay</string></property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="qaSpacer">
+          <property name="orientation"><enum>Qt::Vertical</enum></property>
+          <property name="sizeHint"><size><width>20</width><height>40</height></size></property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

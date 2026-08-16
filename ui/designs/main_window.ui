@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1320</width><height>820</height></rect></property>
+  <property name="minimumSize"><size><width>1100</width><height>680</height></size></property>
+  <property name="windowTitle"><string>Phần mềm Quản lý Kho Linh kiện</string></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="rootLayout">
+    <property name="spacing"><number>0</number></property>
+    <property name="leftMargin"><number>0</number></property>
+    <property name="topMargin"><number>0</number></property>
+    <property name="rightMargin"><number>0</number></property>
+    <property name="bottomMargin"><number>0</number></property>
+    <item>
+     <widget class="QFrame" name="sidebarFrame">
+      <property name="minimumSize"><size><width>232</width><height>0</height></size></property>
+      <property name="maximumSize"><size><width>232</width><height>16777215</height></size></property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <property name="spacing"><number>4</number></property>
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>16</number></property>
+       <item>
+        <widget class="QFrame" name="logoFrame">
+         <property name="minimumSize"><size><width>0</width><height>84</height></size></property>
+         <layout class="QHBoxLayout" name="logoLayout">
+          <property name="leftMargin"><number>20</number></property>
+          <property name="topMargin"><number>14</number></property>
+          <property name="rightMargin"><number>16</number></property>
+          <property name="bottomMargin"><number>14</number></property>
+          <property name="spacing"><number>10</number></property>
+          <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+           <widget class="QLabel" name="lblLogoIcon">
+            <property name="minimumSize"><size><width>40</width><height>40</height></size></property>
+            <property name="maximumSize"><size><width>40</width><height>40</height></size></property>
+            <property name="text"><string/></property>
+            <property name="alignment"><set>Qt::AlignCenter</set></property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="logoTextLayout">
+            <property name="spacing"><number>2</number></property>
+            <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+             <widget class="QLabel" name="lblAppTitle">
+              <property name="text"><string>KHO LINH KIỆN</string></property>
+              <property name="alignment"><set>Qt::AlignLeft|Qt::AlignVCenter</set></property>
+             </widget>
+            </item>
+            <item alignment="Qt::AlignLeft|Qt::AlignVCenter">
+             <widget class="QLabel" name="lblAppSubtitle">
+              <property name="text"><string>Quản lý vật tư &amp; linh kiện</string></property>
+              <property name="alignment"><set>Qt::AlignLeft|Qt::AlignVCenter</set></property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="logoRightSpacer">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint"><size><width>10</width><height>10</height></size></property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="navSeparator">
+         <property name="minimumSize"><size><width>0</width><height>1</height></size></property>
+         <property name="maximumSize"><size><width>16777215</width><height>1</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="topSpacer1">
+         <property name="orientation"><enum>Qt::Vertical</enum></property>
+         <property name="sizeType"><enum>QSizePolicy::Fixed</enum></property>
+         <property name="sizeHint"><size><width>20</width><height>12</height></size></property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavDashboard">
+         <property name="minimumSize"><size><width>0</width><height>46</height></size></property>
+         <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         <property name="text"><string>  📊    Tổng quan</string></property>
+         <property name="checkable"><bool>true</bool></property>
+         <property name="checked"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavComponents">
+         <property name="minimumSize"><size><width>0</width><height>46</height></size></property>
+         <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         <property name="text"><string>  🧩    Linh kiện / Vật tư</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavStockIn">
+         <property name="minimumSize"><size><width>0</width><height>46</height></size></property>
+         <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         <property name="text"><string>  📥    Nhập kho</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavStockOut">
+         <property name="minimumSize"><size><width>0</width><height>46</height></size></property>
+         <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         <property name="text"><string>  📤    Xuất kho</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavReceipts">
+         <property name="minimumSize"><size><width>0</width><height>46</height></size></property>
+         <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         <property name="text"><string>  🧾    Lịch sử phiếu</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavCategories">
+         <property name="minimumSize"><size><width>0</width><height>46</height></size></property>
+         <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         <property name="text"><string>  🏷️    Danh mục</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnNavBackup">
+         <property name="minimumSize"><size><width>0</width><height>46</height></size></property>
+         <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         <property name="text"><string>  💾    Sao lưu &amp;&amp; Khôi phục</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="sidebarSpacer">
+         <property name="orientation"><enum>Qt::Vertical</enum></property>
+         <property name="sizeHint"><size><width>20</width><height>40</height></size></property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblVersion">
+         <property name="text"><string>Phiên bản 1.0.0</string></property>
+         <property name="alignment"><set>Qt::AlignCenter</set></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QFrame" name="contentFrame">
+      <layout class="QVBoxLayout" name="contentLayout">
+       <property name="spacing"><number>0</number></property>
+       <property name="leftMargin"><number>0</number></property>
+       <property name="topMargin"><number>0</number></property>
+       <property name="rightMargin"><number>0</number></property>
+       <property name="bottomMargin"><number>0</number></property>
+       <item>
+        <widget class="QFrame" name="topBarFrame">
+         <property name="minimumSize"><size><width>0</width><height>64</height></size></property>
+         <property name="maximumSize"><size><width>16777215</width><height>64</height></size></property>
+         <layout class="QHBoxLayout" name="topBarLayout">
+          <property name="leftMargin"><number>28</number></property>
+          <property name="rightMargin"><number>28</number></property>
+          <item>
+           <widget class="QLabel" name="lblPageTitle">
+            <property name="text"><string>Tổng quan</string></property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="topBarSpacer">
+            <property name="orientation"><enum>Qt::Horizontal</enum></property>
+            <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblDateTime">
+            <property name="text"><string>--/--/---- --:--</string></property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="topBarSeparator">
+         <property name="minimumSize"><size><width>0</width><height>1</height></size></property>
+         <property name="maximumSize"><size><width>16777215</width><height>1</height></size></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="stackedWidget">
+         <property name="currentIndex"><number>0</number></property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

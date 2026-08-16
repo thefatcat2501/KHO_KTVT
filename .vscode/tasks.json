@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "1. Cài đặt thư viện (pip install)",
+            "type": "shell",
+            "command": "pip install -r requirements.txt && pip install pyinstaller",
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        },
+        {
+            "label": "2. Chạy thử phần mềm (python main.py)",
+            "type": "shell",
+            "command": "python main.py",
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        },
+        {
+            "label": "3. Build file .exe (PyInstaller)",
+            "type": "shell",
+            "command": "${workspaceFolder}\\build_exe.bat",
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": [],
+            "presentation": { "reveal": "always", "panel": "dedicated" }
+        }
+    ]
+}

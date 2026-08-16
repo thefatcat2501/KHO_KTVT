@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CategoriesPage</class>
+ <widget class="QWidget" name="CategoriesPage">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1000</width><height>700</height></rect></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin"><number>28</number></property>
+   <property name="topMargin"><number>18</number></property>
+   <property name="rightMargin"><number>28</number></property>
+   <property name="bottomMargin"><number>18</number></property>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <widget class="QWidget" name="tabCategory">
+      <attribute name="title"><string>🏷️  Loại linh kiện</string></attribute>
+      <layout class="QHBoxLayout" name="tabCategoryLayout">
+       <item>
+        <widget class="QTableWidget" name="tblCategory">
+         <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+         <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+         <property name="alternatingRowColors"><bool>true</bool></property>
+         <attribute name="horizontalHeaderStretchLastSection"><bool>true</bool></attribute>
+         <column><property name="text"><string>Tên loại</string></property></column>
+         <column><property name="text"><string>Mô tả</string></property></column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="formCategoryFrame">
+         <property name="minimumSize"><size><width>300</width><height>0</height></size></property>
+         <property name="maximumSize"><size><width>320</width><height>16777215</height></size></property>
+         <layout class="QVBoxLayout" name="formCategoryLayout">
+          <property name="leftMargin"><number>16</number></property>
+          <property name="topMargin"><number>14</number></property>
+          <property name="rightMargin"><number>16</number></property>
+          <property name="spacing"><number>10</number></property>
+          <item><widget class="QLabel" name="lblCategoryFormTitle"><property name="text"><string>Thêm / Sửa loại linh kiện</string></property><property name="objectName" stdset="0"><string notr="true">sectionTitle</string></property></widget></item>
+          <item><widget class="QLineEdit" name="txtCategoryName"><property name="placeholderText"><string>Tên loại linh kiện *</string></property></widget></item>
+          <item><widget class="QPlainTextEdit" name="pteCategoryDesc"><property name="maximumSize"><size><width>16777215</width><height>90</height></size></property></widget></item>
+          <item>
+           <layout class="QHBoxLayout" name="categoryBtnLayout">
+            <item><widget class="QPushButton" name="btnCategorySave"><property name="text"><string>💾  Lưu</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property><property name="objectName" stdset="0"><string notr="true">accentButton</string></property></widget></item>
+            <item><widget class="QPushButton" name="btnCategoryNew"><property name="text"><string>➕  Mới</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+            <item><widget class="QPushButton" name="btnCategoryDelete"><property name="text"><string>🗑  Xóa</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property><property name="objectName" stdset="0"><string notr="true">dangerButton</string></property></widget></item>
+           </layout>
+          </item>
+          <item><spacer name="categorySpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabManufacturer">
+      <attribute name="title"><string>🏭  Nhà sản xuất</string></attribute>
+      <layout class="QHBoxLayout" name="tabManufacturerLayout">
+       <item>
+        <widget class="QTableWidget" name="tblManufacturer">
+         <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+         <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+         <property name="alternatingRowColors"><bool>true</bool></property>
+         <attribute name="horizontalHeaderStretchLastSection"><bool>true</bool></attribute>
+         <column><property name="text"><string>Tên nhà sản xuất</string></property></column>
+         <column><property name="text"><string>Thông tin liên hệ</string></property></column>
+         <column><property name="text"><string>Địa chỉ</string></property></column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="formManufacturerFrame">
+         <property name="minimumSize"><size><width>300</width><height>0</height></size></property>
+         <property name="maximumSize"><size><width>320</width><height>16777215</height></size></property>
+         <layout class="QVBoxLayout" name="formManufacturerLayout">
+          <property name="leftMargin"><number>16</number></property>
+          <property name="topMargin"><number>14</number></property>
+          <property name="rightMargin"><number>16</number></property>
+          <property name="spacing"><number>10</number></property>
+          <item><widget class="QLabel" name="lblManufacturerFormTitle"><property name="text"><string>Thêm / Sửa nhà sản xuất</string></property><property name="objectName" stdset="0"><string notr="true">sectionTitle</string></property></widget></item>
+          <item><widget class="QLineEdit" name="txtManufacturerName"><property name="placeholderText"><string>Tên nhà sản xuất *</string></property></widget></item>
+          <item><widget class="QLineEdit" name="txtManufacturerContact"><property name="placeholderText"><string>SĐT / Email liên hệ</string></property></widget></item>
+          <item><widget class="QLineEdit" name="txtManufacturerAddress"><property name="placeholderText"><string>Địa chỉ</string></property></widget></item>
+          <item>
+           <layout class="QHBoxLayout" name="manufacturerBtnLayout">
+            <item><widget class="QPushButton" name="btnManufacturerSave"><property name="text"><string>💾  Lưu</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property><property name="objectName" stdset="0"><string notr="true">accentButton</string></property></widget></item>
+            <item><widget class="QPushButton" name="btnManufacturerNew"><property name="text"><string>➕  Mới</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+            <item><widget class="QPushButton" name="btnManufacturerDelete"><property name="text"><string>🗑  Xóa</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property><property name="objectName" stdset="0"><string notr="true">dangerButton</string></property></widget></item>
+           </layout>
+          </item>
+          <item><spacer name="manufacturerSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabProduct">
+      <attribute name="title"><string>📦  Sản phẩm sử dụng</string></attribute>
+      <layout class="QHBoxLayout" name="tabProductLayout">
+       <item>
+        <widget class="QTableWidget" name="tblProduct">
+         <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+         <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+         <property name="alternatingRowColors"><bool>true</bool></property>
+         <attribute name="horizontalHeaderStretchLastSection"><bool>true</bool></attribute>
+         <column><property name="text"><string>Tên sản phẩm</string></property></column>
+         <column><property name="text"><string>Mô tả</string></property></column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="formProductFrame">
+         <property name="minimumSize"><size><width>300</width><height>0</height></size></property>
+         <property name="maximumSize"><size><width>320</width><height>16777215</height></size></property>
+         <layout class="QVBoxLayout" name="formProductLayout">
+          <property name="leftMargin"><number>16</number></property>
+          <property name="topMargin"><number>14</number></property>
+          <property name="rightMargin"><number>16</number></property>
+          <property name="spacing"><number>10</number></property>
+          <item><widget class="QLabel" name="lblProductFormTitle"><property name="text"><string>Thêm / Sửa sản phẩm sử dụng</string></property><property name="objectName" stdset="0"><string notr="true">sectionTitle</string></property></widget></item>
+          <item><widget class="QLineEdit" name="txtProductName"><property name="placeholderText"><string>Tên sản phẩm *</string></property></widget></item>
+          <item><widget class="QPlainTextEdit" name="pteProductDesc"><property name="maximumSize"><size><width>16777215</width><height>90</height></size></property></widget></item>
+          <item>
+           <layout class="QHBoxLayout" name="productBtnLayout">
+            <item><widget class="QPushButton" name="btnProductSave"><property name="text"><string>💾  Lưu</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property><property name="objectName" stdset="0"><string notr="true">accentButton</string></property></widget></item>
+            <item><widget class="QPushButton" name="btnProductNew"><property name="text"><string>➕  Mới</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property></widget></item>
+            <item><widget class="QPushButton" name="btnProductDelete"><property name="text"><string>🗑  Xóa</string></property><property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property><property name="objectName" stdset="0"><string notr="true">dangerButton</string></property></widget></item>
+           </layout>
+          </item>
+          <item><spacer name="productSpacer"><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint"><size><width>20</width><height>40</height></size></property></spacer></item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

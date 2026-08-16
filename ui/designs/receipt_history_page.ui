@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ReceiptHistoryPage</class>
+ <widget class="QWidget" name="ReceiptHistoryPage">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1000</width><height>700</height></rect></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin"><number>28</number></property>
+   <property name="topMargin"><number>18</number></property>
+   <property name="rightMargin"><number>28</number></property>
+   <property name="bottomMargin"><number>18</number></property>
+   <property name="spacing"><number>12</number></property>
+   <item>
+    <layout class="QHBoxLayout" name="searchRowLayout">
+     <item>
+      <widget class="QLineEdit" name="txtSearch">
+       <property name="minimumSize"><size><width>0</width><height>38</height></size></property>
+       <property name="placeholderText"><string>🔍  Tìm theo số phiếu, đối tác, ghi chú...</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="dteFrom">
+       <property name="calendarPopup"><bool>true</bool></property>
+       <property name="displayFormat"><string>dd/MM/yyyy</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblToDash">
+       <property name="text"><string>—</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QDateEdit" name="dteTo">
+       <property name="calendarPopup"><bool>true</bool></property>
+       <property name="displayFormat"><string>dd/MM/yyyy</string></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnFilterReceipts">
+       <property name="text"><string>Lọc</string></property>
+       <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex"><number>0</number></property>
+     <widget class="QWidget" name="tabImport">
+      <attribute name="title"><string>📥  Phiếu nhập kho</string></attribute>
+      <layout class="QVBoxLayout" name="tabImportLayout">
+       <item>
+        <widget class="QTableWidget" name="tblImportReceipts">
+         <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+         <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+         <property name="alternatingRowColors"><bool>true</bool></property>
+         <attribute name="horizontalHeaderStretchLastSection"><bool>true</bool></attribute>
+         <column><property name="text"><string>Số phiếu</string></property></column>
+         <column><property name="text"><string>Ngày tạo</string></property></column>
+         <column><property name="text"><string>Nhà cung cấp</string></property></column>
+         <column><property name="text"><string>Tổng SL</string></property></column>
+                  <column><property name="text"><string>Ghi chú</string></property></column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="importFooterLayout">
+         <item>
+          <spacer name="impSpacer">
+           <property name="orientation"><enum>Qt::Horizontal</enum></property>
+           <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnViewImportDetail">
+           <property name="text"><string>👁  Xem chi tiết phiếu</string></property>
+           <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnVoidImport">
+           <property name="text"><string>↩  Hủy phiếu này</string></property>
+           <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           <property name="objectName" stdset="0"><string notr="true">dangerButton</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabExport">
+      <attribute name="title"><string>📤  Phiếu xuất kho</string></attribute>
+      <layout class="QVBoxLayout" name="tabExportLayout">
+       <item>
+        <widget class="QTableWidget" name="tblExportReceipts">
+         <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+         <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+         <property name="alternatingRowColors"><bool>true</bool></property>
+         <attribute name="horizontalHeaderStretchLastSection"><bool>true</bool></attribute>
+         <column><property name="text"><string>Số phiếu</string></property></column>
+         <column><property name="text"><string>Ngày tạo</string></property></column>
+         <column><property name="text"><string>Người nhận</string></property></column>
+         <column><property name="text"><string>Tổng SL</string></property></column>
+                  <column><property name="text"><string>Ghi chú</string></property></column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="exportFooterLayout">
+         <item>
+          <spacer name="expSpacer">
+           <property name="orientation"><enum>Qt::Horizontal</enum></property>
+           <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnViewExportDetail">
+           <property name="text"><string>👁  Xem chi tiết phiếu</string></property>
+           <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnVoidExport">
+           <property name="text"><string>↩  Hủy phiếu này</string></property>
+           <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+           <property name="objectName" stdset="0"><string notr="true">dangerButton</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ComponentListPage</class>
+ <widget class="QWidget" name="ComponentListPage">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1000</width><height>700</height></rect></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <property name="leftMargin"><number>28</number></property>
+   <property name="topMargin"><number>18</number></property>
+   <property name="rightMargin"><number>28</number></property>
+   <property name="bottomMargin"><number>18</number></property>
+   <property name="spacing"><number>12</number></property>
+   <item>
+    <widget class="QFrame" name="filterFrame">
+     <layout class="QVBoxLayout" name="filterOuterLayout">
+      <property name="leftMargin"><number>16</number></property>
+      <property name="topMargin"><number>12</number></property>
+      <property name="rightMargin"><number>16</number></property>
+      <property name="bottomMargin"><number>12</number></property>
+      <property name="spacing"><number>10</number></property>
+      <item>
+       <layout class="QHBoxLayout" name="searchRowLayout">
+        <item>
+         <widget class="QLineEdit" name="txtSearch">
+          <property name="minimumSize"><size><width>0</width><height>38</height></size></property>
+          <property name="placeholderText"><string>🔍  Tìm theo mã, tên linh kiện, mã vạch...</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnAddComponent">
+          <property name="minimumSize"><size><width>150</width><height>38</height></size></property>
+          <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+          <property name="text"><string>➕  Thêm linh kiện</string></property>
+          <property name="objectName" stdset="0"><string notr="true">accentButton</string></property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="filterRowLayout">
+        <property name="spacing"><number>10</number></property>
+        <item>
+         <widget class="QLabel" name="lblFilterCategory">
+          <property name="text"><string>Loại:</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cboFilterCategory">
+          <property name="minimumSize"><size><width>140</width><height>34</height></size></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblFilterManufacturer">
+          <property name="text"><string>Nhà sản xuất:</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cboFilterManufacturer">
+          <property name="minimumSize"><size><width>150</width><height>34</height></size></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblFilterProduct">
+          <property name="text"><string>Sản phẩm sử dụng:</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cboFilterProduct">
+          <property name="minimumSize"><size><width>150</width><height>34</height></size></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="lblFilterYear">
+          <property name="text"><string>Năm nhập:</string></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="cboFilterYear">
+          <property name="minimumSize"><size><width>100</width><height>34</height></size></property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="chkLowStockOnly">
+          <property name="text"><string>Chỉ hiện sắp hết hàng</string></property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="filterSpacer">
+          <property name="orientation"><enum>Qt::Horizontal</enum></property>
+          <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnClearFilter">
+          <property name="text"><string>Xóa lọc</string></property>
+          <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTableWidget" name="tblComponents">
+     <property name="editTriggers"><set>QAbstractItemView::NoEditTriggers</set></property>
+     <property name="selectionBehavior"><enum>QAbstractItemView::SelectRows</enum></property>
+     <property name="selectionMode"><enum>QAbstractItemView::SingleSelection</enum></property>
+     <property name="alternatingRowColors"><bool>true</bool></property>
+     <property name="sortingEnabled"><bool>true</bool></property>
+     <attribute name="horizontalHeaderStretchLastSection"><bool>false</bool></attribute>
+     <column><property name="text"><string>Mã LK</string></property></column>
+     <column><property name="text"><string>Mã vạch</string></property></column>
+     <column><property name="text"><string>Tên linh kiện</string></property></column>
+     <column><property name="text"><string>Loại</string></property></column>
+     <column><property name="text"><string>Nhà sản xuất</string></property></column>
+     <column><property name="text"><string>Đơn vị</string></property></column>
+     <column><property name="text"><string>Tồn kho</string></property></column>
+     <column><property name="text"><string>Năm nhập</string></property></column>
+     <column><property name="text"><string>Vị trí</string></property></column>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="footerLayout">
+     <item>
+      <widget class="QLabel" name="lblResultCount">
+       <property name="text"><string>0 linh kiện</string></property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="footerSpacer">
+       <property name="orientation"><enum>Qt::Horizontal</enum></property>
+       <property name="sizeHint"><size><width>40</width><height>20</height></size></property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnViewDetail">
+       <property name="text"><string>👁  Xem chi tiết</string></property>
+       <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnEditComponent">
+       <property name="text"><string>✏️  Sửa</string></property>
+       <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="btnDeleteComponent">
+       <property name="text"><string>🗑  Xóa</string></property>
+       <property name="cursor"><cursorShape>PointingHandCursor</cursorShape></property>
+       <property name="objectName" stdset="0"><string notr="true">dangerButton</string></property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
